@@ -45,8 +45,13 @@ CREATE TABLE `Login`(
 	`password` varchar(40) NOT NULL,
 	`role` varchar(40) NOT NULL,
 	PRIMARY KEY (`username`),
-  	UNIQUE (`username`)
+  UNIQUE (`username`)
 );
+
+insert into `Login` values
+('finchd', 'password1', 'superadmin'),
+('brightj', 'password2', 'admin'),
+('smithj', 'password3', 'customer');
 
 DROP TABLE IF EXISTS `Forms`;
 
@@ -57,6 +62,28 @@ CREATE TABLE `Forms`(
 	PRIMARY KEY (`form_no`),
 	UNIQUE(`form_no`)
 );
+
+Insert into `Forms` values
+('1040', '1040 with 2 W-2s & State Return', 99),
+('1020','Additional Schedules', 20),
+('1000', 'W-2', 5),
+('1010','H-EZ Rent Certificate', 25);
+
+
+DROP TABLE IF EXISTS `Returns`;
+
+CREATE TABLE `Returns`(
+  `return_id` varchar(40) NOT NULL,
+  `customer_id` varchar(40) NOT NULL,
+  `employee_id` varchar(40) NOT NULL,
+  `form_no` varchar(40) NOT NULL,
+  `date` date,
+  PRIMARY KEY (`return_id`),
+  FOREIGN KEY (`customer_id`) REFERENCES Customers(`customer_id`),
+  FOREIGN KEY (`employee_id`) REFERENCES Employees(`employee_id`),
+  FOREIGN KEY (`form_no`) REFERENCES Forms(`form_no`)
+);
+
 
 DROP TABLE IF EXISTS `Appointments`;
 
