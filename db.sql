@@ -66,7 +66,7 @@ CREATE TABLE `Forms`(
 Insert into `Forms` values
 ('1040', '1040 with 2 W-2s & State Return', 99),
 ('1020','Additional Schedules', 20),
-('1000', 'W-2', 5),
+('1000', 'Additional W-2s', 5),
 ('1010','H-EZ Rent Certificate', 25);
 
 
