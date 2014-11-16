@@ -15,7 +15,7 @@
     //if( verify password ) { $_SESSION["username"] = $username;
       //if(customer){ redirect("customermain.php", "");}
       //if(employee){ redirect("employeemain.php", "");} }
-  }else{
+  //}else{
     redirect("login.html","hi");
   }
 ?>
