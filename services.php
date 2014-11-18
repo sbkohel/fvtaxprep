@@ -22,7 +22,6 @@
         <div class="row">
             <div class = "col-lg-8 col-lg-offset-2 deduction">
                 <table class="table table-bordered table-striped">
-                    <tr>
 <?php
         $servername = "localhost";
         $username = "root";
@@ -36,9 +35,9 @@
 
         if ($rows !== FALSE){
             foreach($rows as $row){     
-
+		    echo "<tr>";
                     echo "<td>$row[0]</td>";
-                    echo "<td>$$row[1]</td>";
+                    echo "<td>$row[1]</td>";
                     echo"</tr>"; 
 
             }
