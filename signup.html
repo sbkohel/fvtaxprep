@@ -34,30 +34,44 @@
 					<strong>   Register Yourself </strong>  
 						</div>
 						<div class="panel-body">
-							<form role="form">
+							<form role="form" action="signup.php" method="POST">
 								<br/>
 									<div class="form-group input-group">
 										<span class="input-group-addon"><i class="fa fa-circle-o-notch"  ></i></span>
-										<input type="text" class="form-control" placeholder="Your Name" />
+										<input type="text" class="form-control" name="firstName" placeholder="First Name" />
 									</div>
 								 <div class="form-group input-group">
 										<span class="input-group-addon"><i class="fa fa-tag"  ></i></span>
-										<input type="text" class="form-control" placeholder="Desired Username" />
+										<input type="text" class="form-control" name="lastName" placeholder="Last Name" />
 									</div>
 									 <div class="form-group input-group">
-										<span class="input-group-addon">@</span>
-										<input type="text" class="form-control" placeholder="Your Email" />
+										<span class="input-group-addon"><i class="fa fa-lock"  ></span>
+										<input type="text" class="form-control" name="address" placeholder="Address" />
 									</div>
 								  <div class="form-group input-group">
 										<span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-										<input type="password" class="form-control" placeholder="Enter Password" />
+										<input type="phone" class="form-control" name="phone" placeholder="Phone" />
 									</div>
 								 <div class="form-group input-group">
 										<span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-										<input type="password" class="form-control" placeholder="Retype Password" />
+										<input type="phone" class="form-control" name="cellPhone" placeholder="Cell" />
 									</div>
-								 
-								 <a href="#" class="btn btn-success ">Register Me</a>
+									<div class="form-group input-group">
+										<span class="input-group-addon">@</span>
+										<input type="email" class="form-control" name="email" placeholder="Email" />
+									</div>
+									 <div class="form-group input-group">
+										<span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
+										<input type="password" class="form-control" name="password" placeholder="Password" />
+									</div>
+								 <div class="form-group input-group">
+										<span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
+										<input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" />
+									</div>
+								 <div class="form-group input-group">
+								 	Sign up for emails: <input type="checkbox"></input>
+								 </div>
+								 <button>Register Me</button>
 								<hr />
 								Already Registered ?  <a href="login.html" >Login here</a>
 								</form>
@@ -66,7 +80,6 @@
 				</div>
 			</div>
 		</article>
-
 		<footer>
 			<div class="linkbar">
 				<!-- mostly decorative link bar -->
