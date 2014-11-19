@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Log In My WebSite</title>
+	<title>My Website</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
 </head>
@@ -15,23 +15,27 @@
 					<li class=""><a href="index.html">Home</a></li>
 					<li class=""><a href="services.php">Services</a></li>
 					<li class=""><a href="deductions.html">Deductions</a></li>
-					<li class=""><a href="signup.html">Sign Up</a></li>
-					<li class="active"><a href="login.html">Log In</a></li>
+					<li class="active"><a href="signup.html">Sign Up</a></li>
+					<li class=""><a href="login.html">Log In</a></li>
 				</ul>
-		</header>		
-		<h2>Log In</h2>
-		<form id="login" action="login.php" method="post">
-			<dl>
-				<dt>Username</dt><dd><input type="text" name="username" /></dd>
-				<dt>Password</dt><dd><input type="password" name="password"/></dd>
-				<dt></dt>	 <dd><input type="submit" value="Go"/></dd>
-			</dl>
-		</form>
-		<footer>
-			<div class="linkbar">
-				<!-- mostly decorative link bar -->
-				<a href="#top">Jump to Top</a>
+		</header>
+		<nav>
+			<!-- have a side panel to link to website pages?  -->
+				
+		</nav>
+		<article>
+			<!-- use for main text of page -->
+			
+			 <div class="row  pad-top">
+<?php
+				$name = $_POST['firstName'];
+				echo "<h1>Thanks for registering with us: " . $name . "</h1>";
+?>
 			</div>
+		</article>
+
+		<footer>
+
 		</footer>
 	</div>
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
