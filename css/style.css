@@ -1,3 +1,25 @@
-.deduction, .nav,.jumbotron {
+.hours, .deduction, .nav,.jumbotron {
 	margin-top: 50px;
+}
+.hours{
+	font-size: 20px;
+}
+table, td,th{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.jumbotron, .nav-pills>li.active>a{
+	background-color: #228b22;
+}
+.nav{
+	background-color: #bebebe;	
+}
+.black{
+	color: #000000;
+}
+.nav-pills>li.active>a:hover{
+	background-color: #000000;
+}
+.title{
+	text-align: center;
 }
