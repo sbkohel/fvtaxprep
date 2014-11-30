@@ -1,4 +1,4 @@
-.hours, .deduction, .nav,.jumbotron {
+.deduct, .hours, .deduction, .nav,.jumbotron {
 	margin-top: 50px;
 }
 .hours{
@@ -8,11 +8,8 @@ table, td,th{
 	padding-right: 10px;
 	padding-left: 10px;
 }
-.jumbotron, .nav-pills>li.active>a{
+.jumbotron, .nav-pills>li.active>a, .deduct{
 	background-color: #228b22;
-}
-.nav{
-	background-color: #bebebe;	
 }
 .black{
 	color: #000000;
@@ -22,4 +19,7 @@ table, td,th{
 }
 .title{
 	text-align: center;
+}
+.deduct{
+	font-weight: bold;
 }
