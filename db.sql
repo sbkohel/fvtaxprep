@@ -31,7 +31,7 @@ CREATE TABLE `Employees`(
   `phone` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`employee_id`),
   UNIQUE (`employee_id`)
-);
+);
 
 insert into `Employees` values
 ('46432', 'Denise', 'Finch', '920-322-2134'),
@@ -69,7 +69,7 @@ Insert into `Forms` values
 ('1000', 'Additional W-2s', 5),
 ('1010','H-EZ Rent Certificate', 25);
 
-
+
 DROP TABLE IF EXISTS `Returns`;
 
 CREATE TABLE `Returns`(
@@ -89,11 +89,20 @@ DROP TABLE IF EXISTS `Appointments`;
 
 CREATE TABLE `Appointments`(
 	`appointment_id` varchar(40) NOT NULL,
-	`customer_id` varchar(40) NOT NULL,
+	`customer_id` varchar(40) NOT NULL,
 	`date` date,
 	PRIMARY KEY (`appointment_id`),
 	UNIQUE(`appointment_id`),
 	FOREIGN KEY (`customer_id`) REFERENCES Customers(`customer_id`)
 );
 
+DROP TABLE IF EXISTS 'Events'
+
+CREATE TABLE 'Events' (
+        'id' INTEGER PRIMARY KEY, 
+        'name' TEXT, 
+        'start' DATETIME, 
+        'end' DATETIME,
+       	'resource' VARCHAR(30)
+);
 SET FOREIGN_KEY_CHECKS = 1;
