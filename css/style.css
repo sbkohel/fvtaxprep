@@ -1,0 +1,31 @@
+.deduct, .hours, .deduction, .nav,.jumbotron {
+	margin-top: 50px;
+}
+.hours{
+	font-size: 20px;
+}
+table, td,th{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.jumbotron, .nav-pills>li.active>a, .deduct, .panel-primary>.panel-heading, .input-group-addon, .btn-primary, .table-striped>tbody>tr:nth-child(odd)>td{
+	background-color: #228b22;
+}
+.black{
+	color: #000000;
+}
+.nav-pills>li.active>a:hover{
+	background-color: #000000;
+}
+.title{
+	text-align: center;
+}
+.deduct{
+	font-weight: bold;
+}
+a, a:hover{
+	color: black;
+}
+.panel-primary>.panel-heading, .panel-primary{
+	border-color: #228b22;
+}
