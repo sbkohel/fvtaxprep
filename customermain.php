@@ -6,7 +6,10 @@
     <title>My Website</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">    
+    <link href="css/style.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="themes/calendar_white.css">  
+	<script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script> 
+	<script src="calender.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -24,10 +27,14 @@
                 <table class="table table-bordered table-striped">       
              		<tr><button id = "download">Upload PDF</button></tr>
               		<tr><button id = "verifyappointments">Verify Appointments</button></tr>
-              		<h1>
-	             	Calender goes here
-	             		
-              		</h1>
+              	<div id="dp"></div>
+		<div style="float:left; width: 160px;">
+ 			<div id="nav"></div>
+		</div>
+		
+		<div style="margin-left: 160px;">
+  			<div id="dp"></div>
+		</div>
 <?php
 ?>
                 </table> 
@@ -38,6 +45,5 @@
         </p>
 	</div>
 	<script src=>"js/bootstrap.min.js"></script>
-  
 </body>
 </html>
