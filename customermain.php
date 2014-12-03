@@ -24,21 +24,16 @@
         </ul> 
 			
         <div class="row">
-            <div class = "col-lg-8 col-lg-offset-2 deduction">
-                <a href="javascript:next();">Next</a>
-              	    <div id="dp"></div>
-		            <div style="float:left; width: 160px;">
- 			            <div id="nav"></div>
-		            </div>
-		
-		            <div style="margin-left: 160px;">
-  			           <div id="dp"></div>
-		            </div>
+            <div class = "col-lg-2 col-lg-offset-2">
+                <div id="nav"></div>
+            </div>
+            <div class = "col-lg-8">
+                <div id="dp"></div>
+            </div>
+        </div>        
+	            
 <?php
-?>
-                
-            <div>
-        </div>
+?>     
         <p id = "validate">
             <a href="http://validator.w3.org/check/referer">Validate Me</a>
         </p>

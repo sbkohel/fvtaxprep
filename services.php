@@ -24,9 +24,9 @@
                 <table class="table table-bordered table-striped">
 <?php
         $servername = "localhost";
-        $username = "root";//"kohels65";
-        $password = "root";//"style69!!";
-        $dbname = "fvtaxprep";//"kohels65"; 
+        $username = "kohels65";
+        $password = "style69!!";
+        $dbname = "kohels65"; 
 
         $sql = "SELECT form_name, price FROM `Forms` ORDER BY price desc;";
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username,$password);

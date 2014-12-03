@@ -1,6 +1,3 @@
-	var dp = new DayPilot.Calendar("dp");
-		dp.init();
-
 var dp = new DayPilot.Calendar("dp");
 dp.cssClassPrefix = "calendar_white";
 dp.init();

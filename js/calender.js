@@ -1,5 +1,18 @@
+var nav = new DayPilot.Navigator("nav");
+nav.selectMode = "week";
+
+nav.onTimeRangeSelected = function(args) {
+        dp.startDate = args.start;
+        dp.update();
+    };
+nav.init();
+
 var dp = new DayPilot.Calendar("dp");
 dp.cssClassPrefix = "calendar_white";
+dp.dayBeginsHour = 9;
+dp.dayEndsHour = 19;
+dp.businessBeginsHour = 9;
+dp.businessEndsHour = 19;
 dp.init();
 
 dp.viewType = "Week";
@@ -13,7 +26,7 @@ function loadEvents() {
             dp.events.add(e);
         }
     });
-}
+};
 
 dp.onEventMoved = function (args) {
     DayPilot.request(
