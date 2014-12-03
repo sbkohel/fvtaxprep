@@ -8,8 +8,9 @@
     <link href="css/bootstrap-theme.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="themes/calendar_white.css">  
-	<script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script> 
-	<script src="calender.js" type="text/javascript"></script>
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script> 
+    <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script> 
+	<script src="js/calender.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -24,20 +25,18 @@
 			
         <div class="row">
             <div class = "col-lg-8 col-lg-offset-2 deduction">
-                <table class="table table-bordered table-striped">       
-             		<tr><button id = "download">Upload PDF</button></tr>
-              		<tr><button id = "verifyappointments">Verify Appointments</button></tr>
-              	<div id="dp"></div>
-		<div style="float:left; width: 160px;">
- 			<div id="nav"></div>
-		</div>
+                <a href="javascript:next();">Next</a>
+              	    <div id="dp"></div>
+		            <div style="float:left; width: 160px;">
+ 			            <div id="nav"></div>
+		            </div>
 		
-		<div style="margin-left: 160px;">
-  			<div id="dp"></div>
-		</div>
+		            <div style="margin-left: 160px;">
+  			           <div id="dp"></div>
+		            </div>
 <?php
 ?>
-                </table> 
+                
             <div>
         </div>
         <p id = "validate">
@@ -45,5 +44,6 @@
         </p>
 	</div>
 	<script src=>"js/bootstrap.min.js"></script>
+    <script src="js/calender.js" type="text/javascript"></script>
 </body>
 </html>

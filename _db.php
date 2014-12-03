@@ -2,7 +2,13 @@
 
 $db_exists = file_exists("daypilot.sqlite");
 
-$db = new PDO('sqlite:daypilot.sqlite');
+$servername = "localhost";
+$username = "kohels65";
+$password = "style69!!";
+$dbname = "kohels65";
+
+
+$db = new PDO("mysql:host=$servername;dbname=$dbname", $username,$password);
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
 
 if (!$db_exists) {
