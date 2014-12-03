@@ -6,40 +6,85 @@
 	<title>My Website</title>
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	<script src="check.js" type="text/javascript"></script>
 </head>
-<body>
-	<div class="container">
-		<header>
-			<a class="anchor" name="top"></a>
-				<ul class="nav nav-pills">
-					<li class=""><a href="index.html">Home</a></li>
-					<li class=""><a href="services.php">Services</a></li>
-					<li class=""><a href="deductions.html">Deductions</a></li>
-					<li class="active"><a href="signup.html">Sign Up</a></li>
-					<li class=""><a href="login.html">Log In</a></li>
-				</ul>
-		</header>
-		<nav>
-			<!-- have a side panel to link to website pages?  -->
-				
-		</nav>
-		<article>
-			<!-- use for main text of page -->
-			
-			 <div class="row  pad-top">
+<body onload ="start_checkSignup();">
+
 <?php
-				$name = $_POST['firstName'];
-				echo "<h1>Thanks for registering with us: " . $name . "</h1>";
+	$fname = $_POST["firstName"];
+	$lname = $_POST["lastName"];
+	$addr = $_POST["address"];
+	$phone = $_POST["phone"];
+	$cell = $_POST["cellPhone"];
+	$email = $_POST["email"];
+	$usern = $_POST["username"];
+	$pass1 = $_POST["password"];
+	$pass2 = $_POST["confirmPassword"];
+	//$esu = $_POST["esignup"];
+	//echo $bdate;
+	//$p1 = $_POST["pass1"];
+	//$p2 = $_POST["pass2"];
+	//echo "<span onload=\"checkStuff('$p1', '$p1', '$bdate');\">Text</span>";
+	?>
+	<script type="text/javascript">
+		//var thing3 = "<?php echo $_POST['bdatef']; ?>";
+		var cfn = "<?php echo $_POST['firstName']; ?>";
+		var cln = "<?php echo $_POST['lastName']; ?>";
+		var caddr = "<?php echo $_POST['address']; ?>";
+		var cphone = "<?php echo $_POST['phone']; ?>";
+		var ccell = "<?php echo $_POST['cellPhone']; ?>";
+		var cemail = "<?php echo $_POST['email']; ?>";
+		var cun = "<?php echo $_POST['username']; ?>";
+		var cpass1 = "<?php echo $_POST['password']; ?>";
+		var cpass2 = "<?php echo $_POST['confirmPassword']; ?>";
+		//var cesu = "<?php echo $_POST['esignup']; ?>";
+		var isvalid = false;
+	</script>
+	<span id="valid"></span>
+	<div id="hiya"></div>
+	<div id="hiyo"></div>
+	<?php
+	
+	//echo "isvalid!!!";
+	
+	if(isset($_SESSION['uid'])){
+		//data if user is logged in
+		echo "user is already logged in!";
+	} else{
+		//echo "query...";
+		$db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
+		$rows = $db->query("SELECT DISTINCT username, password FROM Login WHERE username='$usern';");
+		$notfound = true;
+		foreach($rows as $row)
+		{	
+			$notfound = false;
+			//echo "$row[0]";
+			break;
+		}
+		//echo $notfound;
+		if($notfound)
+		{
+			$phash = crypt($pass1, "mysalt");                                               //should update hash !!! password_hash('$pass1') 
+			//echo $phash."\n";
+			$db->query("INSERT INTO Login VALUES ('$usern', '$phash', 'customer');");
+			$_SESSION['uid'] = crypt(time());
+			//echo $_SESSION['uid'];
+			echo "user : ".$usern." is logged in!";
+			?>
+			<br/><a class="link" href="customermain.php" id="ccmain">cmain</a><br/>
+			<?php
+		}
+		else
+		{
+			echo "username : ".$usern." already exists!   ";
+			?>
+			<a class="link" href="signup.html">try again!</a><br/>
+			<?php
+		}
+	}
+
 ?>
-			</div>
-		</article>
 
-		<footer>
-
-		</footer>
-	</div>
-	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 
 </body>
 </html>
