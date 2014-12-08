@@ -85,8 +85,15 @@
 								 <div class="form-group input-group">
 								 	Sign up for emails: <input type="checkbox" id="r_esignup" name="esignup"></input>
 								 </div>
-								<span class="notify" id="notification1"></span><br/>
-								<span class="notify" id="notification2"></span>
+								<div class="form-group input-group">
+									<span class="notify" id="notification1"></span>
+								</div>
+								<div class="form-group input-group">
+									<span class="notify" id="notification2"></span>
+								</div>
+								<div class="form-group input-group">
+									<span class="notify" id="notification3"></span>
+								</div>
 								 <input type="button" class="btn btn-primary" id="registerme" value="Register"> 
 								<hr />
 								Already Registered ?  <a href="login0.php" >Login here</a>
