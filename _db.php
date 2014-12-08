@@ -1,6 +1,6 @@
 <?php
 
-$db_exists = file_exists("daypilot.sqlite");
+$db_exists = file_exists("fvtaxprep");
 
 $servername = "localhost";
 $username = "kohels65";
@@ -22,11 +22,11 @@ if (!$db_exists) {
 
     $messages = array(
                     array('name' => 'Event 1',
-                        'start' => '2013-05-09T00:00:00',
-                        'end' => '2013-05-09T10:00:00',
+                        'start' => '2014-12-09T00:00:00',
+                        'end' => '2014-12-09T10:00:00',
                         'resource' => 'B')
                 );
-
+}
     $insert = "INSERT INTO events (name, start, end, resource) VALUES (:name, :start, :end, :resource)";
     $stmt = $db->prepare($insert);
  
@@ -43,6 +43,6 @@ if (!$db_exists) {
       $stmt->execute();
     }
     
-}
+
 
 ?>
