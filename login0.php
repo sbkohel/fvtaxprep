@@ -21,10 +21,12 @@
 		<?php
 		session_start();
 		if (isset($_SESSION['uid'])) {
-			echo "user is already logged in!";
-		?>
-			<br/><a class='link' href='logout.php'>logout</a><br/>
+		?>	
+			<br/>
+			<span><?=$_SESSION['uid']?>, you are already logged in!</large>
+			<br/><a class="btn btn-danger" href='logout.php'>logout</a><br/>
 		<?php
+		
 		} 
 		else{
 		?>

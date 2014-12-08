@@ -44,13 +44,16 @@
         }
 ?>
                 </table> 
-            <div>
+            </div>
         </div>
         <p id = "validate">
             <a href="http://validator.w3.org/check/referer">Validate Me</a>
         </p>
+		<p>
+			<small>Website created as a project by computer science students at the University of Wisconsin Oshkosh</small>
+		</p>
 	</div>
-	<script src=>"js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
   
 </body>
 </html>

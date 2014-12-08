@@ -15,7 +15,7 @@
 <body>
 	<div class="container">
         <ul class="nav nav-pills">
-            <li class=""><a href="index.html">Home</a></li>
+            <li class=""><a href="index0.php">Home</a></li>
             <li class=""><a href="services.php">Services</a></li>
             <li class=""><a href="deductions.html">Deductions</a></li>
             <li class="active"><a href="customermain.php">Customer</a></li>
