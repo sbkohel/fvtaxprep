@@ -22,7 +22,7 @@ if (!$db_exists) {
 
     $messages = array(
                     array('name' => 'Event 1',
-                        'start' => '2014-12-09T00:00:00',
+                        'start' => '2014-12-09T09:00:00',
                         'end' => '2014-12-09T10:00:00',
                         'resource' => 'B')
                 );

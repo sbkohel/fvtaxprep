@@ -10,7 +10,6 @@
     <link type="text/css" rel="stylesheet" href="themes/calendar_white.css">  
 	<script src="js/jquery-1.9.1.min.js" type="text/javascript"></script> 
     <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script> 
-	<script src="js/calender.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -20,6 +19,7 @@
             <li class=""><a href="services.php">Services</a></li>
             <li class=""><a href="deductions.html">Deductions</a></li>
             <li class="active"><a href="customermain.php">Customer</a></li>
+            <li class=""><a href="logout.php">Logout</a></li>
         </ul> 
 	<div class="row">
 	    <div class="downloadFiles">
