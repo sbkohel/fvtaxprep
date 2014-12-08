@@ -47,7 +47,12 @@
                   <tr><button id = "appointments">View Appointments</button></tr>
                   <tr><button id = "delete">Delete Appointments</button> </tr>
                     <h1>
-                    Calender goes here
+	             <div style="float:left; width: 160px;">
+ 			<div id="nav"></div>
+			</div>
+			<div style="margin-left: 160px;">
+  				<div id="dp"></div>
+  			</div>
                     </h1>
                 </table> 
             </div>
