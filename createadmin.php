@@ -31,7 +31,7 @@
 		   		$db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
 				$result = $db->exec($sql);
 				echo "Username $username created <br>";
-        		echo "<a href=\"employee.php\">Log In</a>";
+        		echo "<a href=\"employeemain.php\">Employee Page</a>";
             }
         }
 
