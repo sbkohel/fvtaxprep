@@ -22,6 +22,7 @@
             <li class="active"><a href="employeemain.php">Employee</a></li>
        </ul> 
 			
+<<<<<<< HEAD
         <div class="row calendar">                
 			<form action="upload.php" method="post" enctype="multipart/form-data">
 				<table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
@@ -47,6 +48,58 @@
         <div class="row calendar">
             <div class = "col-lg-2 col-lg-offset-2">
                 <div id="nav"></div>
+=======
+        <div class="row">
+            <div class = "col-lg-8 col-lg-offset-2 deduction">
+                <div class="table table-bordered table-striped">  
+                  <div class="uploadFile">
+			<h4>Upload File</h4>
+			<form action="upload.php" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+				<input type="file" name="fileToUpload" id="fileToUpload"> 
+				<input name="upload" type="submit" class="box btn btn-primary" id="upload" value=" Upload ">
+			</form>
+                  </div>
+			<div class="downloadFiles">
+				  <h4>Download File</h4>
+				  <div>
+				 <form action="download.php" method="post">
+<?php
+					if ($handle = opendir('file_uploads/')) {
+?>
+						<select name="images">
+<?php
+						while (false !== ($entry = readdir($handle))) {
+							if ($entry != "." && $entry != "..") {
+?>
+								<option>
+<?php
+									print $entry;
+?>
+								</option>
+<?php
+							}
+						}
+?>
+						</select>
+<?php
+						closedir($handle);
+					}
+?>
+					<input type="submit" class="btn btn-primary" value="download"/>
+				</form>
+				</div>
+				 </div>
+                    <h1>
+	             <div style="float:left; width: 160px;">
+				<div id="nav"></div>
+				</div>
+				<div style="margin-left: 160px;">
+					<div id="dp"></div>
+				</div>
+                    </h1>
+                </div> 
+>>>>>>> a600daefabe8fba0f1efa372f1b128073de8a515
             </div>
             <div class = "col-lg-8">
                 <div id="dp"></div>

@@ -34,3 +34,15 @@ fieldset {
     border-radius:8px;
     box-shadow:0 0 10px #999;
 }
+.uploadFile{
+	display: inline-block;
+	padding: 0 10px 0 10px;
+}
+.downloadFiles{
+	display: inline-block;
+	border-left: 2px solid black;
+	padding-left: 25px;
+}
+.uploadFile input {
+display: inline-block;
+}
