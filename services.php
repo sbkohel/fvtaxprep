@@ -13,7 +13,7 @@
 	<div class="container">
         <ul class="nav nav-pills">
             <li class=""><a href="index.html">Home</a></li>
-            <li class=""><a href="services.php">Services</a></li>
+            <li class="active"><a href="services.php">Services</a></li>
             <li class=""><a href="deductions.html">Deductions</a></li>
             <li class=""><a href="signup0.php">Sign Up</a></li>
             <li class=""><a href="login0.php">Log In</a></li>

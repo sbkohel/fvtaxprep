@@ -19,7 +19,7 @@
    		}
    		
    		$sql = "SELECT COUNT(*) FROM LabFive WHERE username = \"$username2\";";
-   		$db = new PDO("mysql:dbname=kohels65;host=localhost","root","root");
+   		$db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
    		$rows = $db->query($sql);
 
    		foreach($rows as $row){
@@ -28,7 +28,7 @@
             }
             else{
             	$sql = "INSERT INTO Login (username,password,role) VALUES (\"$username\",\"$password\",\"$role\")";
-		   		$db = new PDO("mysql:dbname=kohels65;host=localhost","root","root");
+		   		$db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
 				$result = $db->exec($sql);
 				echo "Username $username created <br>";
         		echo "<a href=\"employee.php\">Log In</a>";
