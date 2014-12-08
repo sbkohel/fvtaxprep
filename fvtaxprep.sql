@@ -24,7 +24,7 @@
 --
 -- Table structure for table `Appointments`
 --
-drop table if exists `Appointments`;
+drop table if exists `Appointments`
 CREATE TABLE IF NOT EXISTS `Appointments` (
   `appointment_id` varchar(40) NOT NULL,
   `username` varchar(40) NOT NULL,

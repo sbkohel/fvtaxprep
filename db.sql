@@ -96,7 +96,7 @@ CREATE TABLE `Appointments`(
 
 
 
-CREATE TABLE `events` (
+CREATE TABLE `Events` (
         `id` INTEGER PRIMARY KEY, 
         `name` TEXT, 
         `start`DATETIME, 
