@@ -9,7 +9,8 @@
 	<script src="check.js" type="text/javascript"></script>
 </head>
 <body onload ="start_checkSignup();">
-	<?php
+
+<?php
 	session_start();
 	$fname = $_POST["firstName"];
 	$lname = $_POST["lastName"];
@@ -20,10 +21,8 @@
 	$usern = $_POST["username"];
 	$pass1 = $_POST["password"];
 	$pass2 = $_POST["confirmPassword"];
-	$esign = htmlentities($_POST["esignup"]);
-	if(! $esign ){
-		$esign =  "n";
-	}
+	echo "$_POST['esignup']";
+	/*
 	if(isset($_SESSION['uid'])){
 		echo "user is already logged in!";
 	?>
@@ -31,6 +30,7 @@
 	<?php
 	} 
 	else{
+		//echo "query...";
 		$db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
 		$rows = $db->query("SELECT DISTINCT username, password FROM Login WHERE username='$usern';");
 		$notfound = true;
@@ -46,7 +46,7 @@
 			$phash = crypt($pass1, "mysalt");          //should update hash !!! password_hash('$pass1') 
 
 			$db->query("INSERT INTO Login VALUES ('$usern', '$phash', 'customer');");
-			$db->query("INSERT INTO Customers VALUES ('$usern', '$fname', '$lname', '$addr', '$phone', '$cell', '$email', '$esign');");
+			$db->query("INSERT INTO Customers VALUES ('$user', '$fname', '$lname', '$addr', '$phone', '$cell', '$email');");
 			$_SESSION['uid'] = $usern;
 			echo "user : ".$usern." is logged in!";
 			?>
@@ -57,11 +57,11 @@
 		{
 			echo "username : ".$usern." already exists!   ";
 			?>
-			<br/><a class="link" href="signup0.php" id="gohere">try again!</a><br/>
+			<br/><a class="link" href="signup.html" id="gohere">try again!</a><br/>
 			<?php
 		}
 	}
-
+*/
 ?>
 
 
