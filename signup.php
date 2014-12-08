@@ -47,7 +47,7 @@
 			//echo $customerid;
 			$db->query("INSERT INTO Login VALUES ('$usern', '$phash', 'customer');");
 			$db->query("INSERT INTO Customers VALUES ('$customerid', '$fname', '$lname', '$addr', '$phone', '$cell', '$email');");
-			$_SESSION['uid'] = $sessionid;
+			$_SESSION['uid'] = $usern;
 			//$_SESSION['uid'] = $usern;
 			//echo $_SESSION['uid'];
 			echo "user : ".$usern." is logged in!";
