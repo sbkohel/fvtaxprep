@@ -83,7 +83,7 @@
 										<input type="password" id="r_pass2" class="form-control" name="confirmPassword" placeholder="Confirm Password" />
 									</div>
 								 <div class="form-group input-group">
-								 	Sign up for emails: <input type="checkbox" id="r_esignup" name="esignup"></input>
+								 	Sign up for emails: <input type="checkbox" id="r_esignup" name="esignup" value="y"></input>
 								 </div>
 								<div class="form-group input-group">
 									<span class="notify" id="notification1"></span>
