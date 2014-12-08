@@ -35,7 +35,7 @@
 				</table>
 			</form>
 			<?php
-			$db = new PDO("mysql:dbname=vanlab18;host=localhost","vanlab18","Mountain123");
+			$db = new PDO("mysql:dbname=kohels65;host=localhost","root","root");
 			$result = $db->query("SELECT id, name FROM upload");
 			foreach($result as $row){
 					$ran = $row['id'];
@@ -50,11 +50,49 @@
                     Calender goes here
                     </h1>
                 </table> 
-            <div>
+            </div>
         </div>
-        <p id = "validate">
-            <a href="http://validator.w3.org/check/referer">Validate Me</a>
-        </p>
+        <div class="row">
+            <div class="col-lg-6">
+                <form method="post" action="createadmin.php">
+                    <fieldset>
+                        <legend>Admin Creation</legend>
+                        <div class="row">
+                            <div class="col-lg-4 text-right">
+                                <h4>Username</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <input ng-model="username" class="form-control" name="username">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 text-right">
+                                <h4>Password</h4>
+                            </div>
+                            <div class="col-lg-4">
+                                <input name="password" type="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row col-lg-offset-3">
+                                <label><input name="admintype" type="radio" value="super">Super Admin</label>
+                                <label><input name="admintype" type="radio" value="admin" checked="checked">Admin</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row col-lg-offset-4">
+                                <input class="btn btn-primary" name="subbtn"type="submit" value="Submit">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <p id = "validate">
+                <a href="http://validator.w3.org/check/referer">Validate Me</a>
+            </p>
+        </div>
 	</div>
 	<script src=>"js/bootstrap.min.js"></script>
 </body>
