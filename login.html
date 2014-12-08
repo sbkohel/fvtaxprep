@@ -19,6 +19,15 @@
 					<li class="active"><a href="login.html">Log In</a></li>
 				</ul>
 		</header>	
+		<?php
+		if(isset($_SESSION['uid'])){
+			echo "user is already logged in!";
+		?>
+		<br/><a class="link" href="login.html" id="gohere">logout</a><br/>
+		<?php
+		} 
+		else{
+		?>
 		<div class="row">	
 			<div class="col-lg-9 col-lg-offset-3">
 				<h2>Log In</h2>

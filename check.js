@@ -3,10 +3,17 @@ function start_signup() {
 	sub.onclick=verifyRegister;
 }
 function start_checkSignup(){
-	var lk = document.getElementById("ccmain");
-	
+	var lk = document.getElementById("gohere");
+	lk.click();
 }
-
+function start_checkLogin(){
+	var lk = document.getElementById("gohere");
+	lk.click();
+}
+function logout(){
+	var lk = document.getElementById("leave");
+	lk.click();
+}
 function verifyRegister(){
 	var fm = document.getElementById("r_form");
 	var fn = document.getElementById("r_fname");

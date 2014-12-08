@@ -20,37 +20,13 @@
 	$usern = $_POST["username"];
 	$pass1 = $_POST["password"];
 	$pass2 = $_POST["confirmPassword"];
-	//$esu = $_POST["esignup"];
-	//echo $bdate;
-	//$p1 = $_POST["pass1"];
-	//$p2 = $_POST["pass2"];
-	//echo "<span onload=\"checkStuff('$p1', '$p1', '$bdate');\">Text</span>";
-	?>
-	<script type="text/javascript">
-		//var thing3 = "<?php echo $_POST['bdatef']; ?>";
-		var cfn = "<?php echo $_POST['firstName']; ?>";
-		var cln = "<?php echo $_POST['lastName']; ?>";
-		var caddr = "<?php echo $_POST['address']; ?>";
-		var cphone = "<?php echo $_POST['phone']; ?>";
-		var ccell = "<?php echo $_POST['cellPhone']; ?>";
-		var cemail = "<?php echo $_POST['email']; ?>";
-		var cun = "<?php echo $_POST['username']; ?>";
-		var cpass1 = "<?php echo $_POST['password']; ?>";
-		var cpass2 = "<?php echo $_POST['confirmPassword']; ?>";
-		//var cesu = "<?php echo $_POST['esignup']; ?>";
-		var isvalid = false;
-	</script>
-	<span id="valid"></span>
-	<div id="hiya"></div>
-	<div id="hiyo"></div>
-	<?php
-	
-	//echo "isvalid!!!";
-	
 	if(isset($_SESSION['uid'])){
-		//data if user is logged in
 		echo "user is already logged in!";
-	} else{
+	?>
+		<br/><a class="link" href="customermain.php" id="gohere">cmain</a><br/>
+	<?php
+	} 
+	else{
 		//echo "query...";
 		$db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
 		$rows = $db->query("SELECT DISTINCT username, password FROM Login WHERE username='$usern';");
@@ -62,23 +38,24 @@
 			break;
 		}
 		//echo $notfound;
-		if($notfound)
+		if($notfound && ( $pass1 == $pass2 ) )
 		{
-			$phash = crypt($pass1, "mysalt");                                               //should update hash !!! password_hash('$pass1') 
-			//echo $phash."\n";
+			$phash = crypt($pass1, "mysalt");          //should update hash !!! password_hash('$pass1') 
+			$sessionid = crypt(time());
 			$db->query("INSERT INTO Login VALUES ('$usern', '$phash', 'customer');");
-			$_SESSION['uid'] = crypt(time());
+			$_SESSION['sid'] = $sessionid;
+			$_SESSION['uid'] = $usern;
 			//echo $_SESSION['uid'];
 			echo "user : ".$usern." is logged in!";
 			?>
-			<br/><a class="link" href="customermain.php" id="ccmain">cmain</a><br/>
+			<br/><a class="link" href="customermain.php" id="gohere">cmain</a><br/>
 			<?php
 		}
 		else
 		{
 			echo "username : ".$usern." already exists!   ";
 			?>
-			<a class="link" href="signup.html">try again!</a><br/>
+			<br/><a class="link" href="signup.html" id="gohere">try again!</a><br/>
 			<?php
 		}
 	}

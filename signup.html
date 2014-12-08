@@ -26,7 +26,15 @@
 		</nav>
 		<article>
 			<!-- use for main text of page -->
-			
+			<?php
+			if(isset($_SESSION['uid'])){
+			echo "user is already logged in!";
+			?>
+			<br/><a class="link" href="login.html" id="gohere">logout</a><br/>
+			<?php
+			} 
+			else{
+			?>
 			 <div class="row  pad-top">
 				<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
 					<h2>New to This Site?</h2>
@@ -84,6 +92,9 @@
 					</div>
 				</div>
 			</div>
+			<?php
+			}
+			?>
 		</article>
 		<footer>
 			<div class="linkbar">
