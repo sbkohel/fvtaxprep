@@ -17,6 +17,8 @@
 				<li class=""><a href="deductions.html">Deductions</a></li>
 				<li class=""><a href="signup0.php">Sign Up</a></li>
 				<li class=""><a href="login0.php">Log In</a></li>
+				<li class=""><a href="employeemain.php">Employee Main</a></li>
+				<li class=""><a href="customermain.php">Customer Main</a></li>
 			</ul>			
 		</header>
 		<div class="jumbotron">

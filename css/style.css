@@ -46,11 +46,3 @@ fieldset {
 .notify{
 	color: red;
 }
-.downloadFiles{
-	display: inline-block;
-	border-left: 2px solid black;
-	padding-left: 25px;
-}
-.uploadFile input {
-display: inline-block;
-}

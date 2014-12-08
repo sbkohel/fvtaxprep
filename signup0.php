@@ -11,7 +11,6 @@
 <body onload="start_signup()">
 	<div class="container">
 		<header>
-			<a class="anchor" name="top"></a>
 				<ul class="nav nav-pills">
 					<li class=""><a href="index.html">Home</a></li>
 					<li class=""><a href="services.php">Services</a></li>
@@ -29,9 +28,11 @@
 			<?php
 			session_start();
 			if(isset($_SESSION['uid'])){
-			echo "user is already logged in!";
 			?>
-			<br/><a class="link" href="logout.php" id="gohere">logout</a><br/>
+			<p>
+				<large><?=$_SESSION['uid']?>, you are already logged in!</large>
+			</p>
+			<br/><a class="btn btn-danger" href="logout.php" id="gohere">logout</a><br/>
 			<?php
 			} 
 			else{
@@ -55,16 +56,16 @@
 										<input type="text" id="r_lname" class="form-control" name="lastName" placeholder="Last Name" />
 									</div>
 									 <div class="form-group input-group">
-										<span class="input-group-addon"><i class="fa fa-lock"  ></span>
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span>
 										<input type="text" id="r_addr" class="form-control" name="address" placeholder="Address" />
 									</div>
 								  <div class="form-group input-group">
 										<span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-										<input type="phone" id="r_phone" class="form-control" name="phone" placeholder="Phone" />
+										<input type="text" id="r_phone" class="form-control" name="phone" placeholder="Phone" />
 									</div>
 								 <div class="form-group input-group">
-										<span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-										<input type="phone" id="r_cell" class="form-control" name="cellPhone" placeholder="Cell" />
+										<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+										<input type="text" id="r_cell" class="form-control" name="cellPhone" placeholder="Cell" />
 									</div>
 									<div class="form-group input-group">
 										<span class="input-group-addon">@</span>
@@ -83,17 +84,14 @@
 										<input type="password" id="r_pass2" class="form-control" name="confirmPassword" placeholder="Confirm Password" />
 									</div>
 								 <div class="form-group input-group">
+
 								 	Sign up for emails: <input type="checkbox" id="r_esignup" name="esignup"></input>
+
+								 	
 								 </div>
 								<div class="form-group input-group">
 									<span class="notify" id="notification1"></span>
-								</div>
-								<div class="form-group input-group">
-									<span class="notify" id="notification2"></span>
-								</div>
-								<div class="form-group input-group">
-									<span class="notify" id="notification3"></span>
-								</div>
+								</div>								
 								 <input type="button" class="btn btn-primary" id="registerme" value="Register"> 
 								<hr />
 								Already Registered ?  <a href="login0.php" >Login here</a>
@@ -109,7 +107,12 @@
 		<footer>
 			<div class="linkbar">
 				<!-- mostly decorative link bar -->
-				<a href="#top">Jump to Top</a>
+            	<p id = "validate">
+                	<a href="http://validator.w3.org/check/referer">Validate Me</a>
+            	</p>
+				<p>
+					<small>Website created as a project by computer science students at the University of Wisconsin Oshkosh</small>
+				</p>
 			</div>
 		</footer>
 	</div>
