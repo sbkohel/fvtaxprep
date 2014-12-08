@@ -43,6 +43,9 @@ fieldset {
 	display: inline-block;
 	padding: 0 10px 0 10px;
 }
+.notify{
+	color: red;
+}
 .downloadFiles{
 	display: inline-block;
 	border-left: 2px solid black;

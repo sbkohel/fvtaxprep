@@ -47,6 +47,8 @@ function verifyPasswords(pa1, pa2){
 		return true;
 	}
 	else{
+		document.getElementById("notification1").innerHTML = hi!;
+		document.getElementById("notification2").innerHTML = hi!;
 		//alert("notmatch");
 		return false;
 	}
