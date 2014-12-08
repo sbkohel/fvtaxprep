@@ -49,10 +49,10 @@ function verifyPasswords(pa1, pa2){
 	else{
 		var noti = "";
 		if( !(pa1.length > 7 && pa1.search(/[0-9]/)+1 && pa1.search(/[a-z]/i)+1 && pa1.search(/[\W|_]/)+1)) {
-			noti = noti+"*password must be atleast 8 characters and contain atleast 1 letter, 1 number, and one other character.\n";
+			noti = noti+"*password must be atleast 8 characters and contain atleast 1 letter, 1 number, and one other character.<br/>";
 		}
 		if( pa1 != pa2 ){
-			noti = noti+"*password entries do not match!\n";
+			noti = noti+"*password entries do not match!";
 		}
 		document.getElementById("notification1").innerHTML = noti;
 		return false;

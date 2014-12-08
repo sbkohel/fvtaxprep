@@ -21,6 +21,8 @@
 	$usern = $_POST["username"];
 	$pass1 = $_POST["password"];
 	$pass2 = $_POST["confirmPassword"];
+	echo "$_POST['esignup']";
+	/*
 	if(isset($_SESSION['uid'])){
 		echo "user is already logged in!";
 	?>
@@ -42,14 +44,10 @@
 		if($notfound && ( $pass1 == $pass2 ) )
 		{
 			$phash = crypt($pass1, "mysalt");          //should update hash !!! password_hash('$pass1') 
-			$sessionid = crypt(time());
-			$customerid = substr($sessionid, 0, 40);
-			//echo $customerid;
+
 			$db->query("INSERT INTO Login VALUES ('$usern', '$phash', 'customer');");
-			$db->query("INSERT INTO Customers VALUES ('$customerid', '$fname', '$lname', '$addr', '$phone', '$cell', '$email');");
+			$db->query("INSERT INTO Customers VALUES ('$user', '$fname', '$lname', '$addr', '$phone', '$cell', '$email');");
 			$_SESSION['uid'] = $usern;
-			//$_SESSION['uid'] = $usern;
-			//echo $_SESSION['uid'];
 			echo "user : ".$usern." is logged in!";
 			?>
 			<br/><a class="link" href="customermain.php" id="gohere">cmain</a><br/>
@@ -63,7 +61,7 @@
 			<?php
 		}
 	}
-
+*/
 ?>
 
 
