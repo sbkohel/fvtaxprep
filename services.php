@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Fox Valley Tax Prep</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">    
@@ -13,7 +13,7 @@
 	<div class="container">
         <ul class="nav nav-pills">
             <li class=""><a href="index.html">Home</a></li>
-            <li class="active"><a href="services.php">Services</a></li>
+            <li class=""><a href="services.php">Services</a></li>
             <li class=""><a href="deductions.html">Deductions</a></li>
             <li class=""><a href="signup0.php">Sign Up</a></li>
             <li class=""><a href="login0.php">Log In</a></li>
@@ -37,7 +37,7 @@
             foreach($rows as $row){     
 		    echo "<tr>";
                     echo "<td>$row[0]</td>";
-                    echo "<td>$row[1]</td>";
+                    echo "<td>$$row[1]</td>";
                     echo"</tr>"; 
 
             }
