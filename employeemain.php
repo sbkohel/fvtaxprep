@@ -21,51 +21,29 @@
             <li class=""><a href="deductions.html">Deductions</a></li>
             <li class="active"><a href="employeemain.php">Employee</a></li>
        </ul> 
-			
-<<<<<<< HEAD
-        <div class="row calendar">                
-			<form action="upload.php" method="post" enctype="multipart/form-data">
-				<table width="350" border="0" cellpadding="1" cellspacing="1" class="box">
-					<tr> 
-						<td width="246">
-							<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-							<input name="userfile" type="file" id="userfile"> 
-						</td>
-						<td width="80"><input class="btn btn-success"name="upload" type="submit" class="box" id="upload" value=" Upload "></td>
-					</tr>
-				</table>
-			</form>
-			<?php
-			$db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
-			$result = $db->query("SELECT id, name FROM upload");
-			foreach($result as $row){
-					$ran = $row['id'];
-					$name = $row['name'];
-					print "<a href=\"download.php?id=". $ran ."\">" . $name . "</a><br/>";
-				}
-			?>
-        </div>          
         <div class="row calendar">
-            <div class = "col-lg-2 col-lg-offset-2">
+            <div class = "col-lg-2">
                 <div id="nav"></div>
-=======
-        <div class="row">
-            <div class = "col-lg-8 col-lg-offset-2 deduction">
-                <div class="table table-bordered table-striped">  
-                  <div class="uploadFile">
-			<h4>Upload File</h4>
-			<form action="upload.php" method="post" enctype="multipart/form-data">
-				<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-				<input type="file" name="fileToUpload" id="fileToUpload"> 
-				<input name="upload" type="submit" class="box btn btn-primary" id="upload" value=" Upload ">
-			</form>
-                  </div>
-			<div class="downloadFiles">
-				  <h4>Download File</h4>
-				  <div>
-				 <form action="download.php" method="post">
+            </div>
+            <div class = "col-lg-8">
+                <div id="dp"></div>
+            </div>
+        
+            <div class="col-lg-2">
+                <div class="uploadFile">
+    		         <h4>Upload File</h4>
+        			<form action="upload.php" method="post" enctype="multipart/form-data">
+        				<input type="hidden" name="MAX_FILE_SIZE" value="2000000">
+        				<input type="file" name="fileToUpload" id="fileToUpload"> 
+        				<input name="upload" type="submit" class="box btn btn-primary" id="upload" value=" Upload ">
+        			</form>
+                </div>            
+			    <div class="downloadFiles">
+				    <h4>Download File</h4>
+				   
+				    <form action="download.php" method="post">
 <?php
-					if ($handle = opendir('file_uploads/')) {
+					   if ($handle = opendir('file_uploads/')) {
 ?>
 						<select name="images">
 <?php
@@ -86,26 +64,11 @@
 						closedir($handle);
 					}
 ?>
-					<input type="submit" class="btn btn-primary" value="download"/>
-				</form>
+					   <input type="submit" class="btn btn-primary" value="download"/>
+				    </form>
 				</div>
-				 </div>
-                    <h1>
-	             <div style="float:left; width: 160px;">
-				<div id="nav"></div>
-				</div>
-				<div style="margin-left: 160px;">
-					<div id="dp"></div>
-				</div>
-                    </h1>
-                </div> 
->>>>>>> a600daefabe8fba0f1efa372f1b128073de8a515
-            </div>
-            <div class = "col-lg-8">
-                <div id="dp"></div>
-            </div>
-        </div> 
-                    
+		    </div>   
+        </div>                 
         <div class="row">
             <div class="col-lg-6">
                 <form method="post" action="changePrice.php">
