@@ -47,13 +47,14 @@ function verifyPasswords(pa1, pa2){
 		return true;
 	}
 	else{
+		var noti = "";
 		if( !(pa1.length > 7 && pa1.search(/[0-9]/)+1 && pa1.search(/[a-z]/i)+1 && pa1.search(/[\W|_]/)+1)) {
-			document.getElementById("notification1").innerHTML = "*password must be atleast 8 characters and contain atleast 1 letter, 1 number, and one other character.";
+			noti = noti+"*password must be atleast 8 characters and contain atleast 1 letter, 1 number, and one other character.\n";
 		}
 		if( pa1 != pa2 ){
-			document.getElementById("notification2").innerHTML = "password entries do not match!";
+			noti = noti+"*password entries do not match!\n";
 		}
-		//alert("notmatch");
+		document.getElementById("notification1").innerHTML = noti;
 		return false;
 	}
 }
