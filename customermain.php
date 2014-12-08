@@ -21,7 +21,41 @@
             <li class=""><a href="deductions.html">Deductions</a></li>
             <li class="active"><a href="customermain.php">Customer</a></li>
         </ul> 
-			
+	<div class="row">
+	    <div class="downloadFiles">
+		    <h4>Download File</h4>
+		   
+		    <form action="download.php" method="post">
+<?php
+				session_start();    
+				$sessionID = $_SESSION['uid'];
+			   if ($handle = opendir('file_uploads/')) {
+?>
+				<select name="images">
+<?php
+				while (false !== ($entry = readdir($handle))) {
+					if ($entry != "." && $entry != "..") {
+						if((string)$entry == $sessionID.".pdf"){
+?>
+						<option>
+<?php
+							print $entry;
+?>
+						</option>
+<?php
+						}
+					}
+				}
+?>
+				</select>
+<?php
+				closedir($handle);
+			}
+?>
+			   <input type="submit" class="btn btn-primary" value="download"/>
+		    </form>
+		</div>
+	</div>			
         <div class="row calendar">
             <div class = "col-lg-2 col-lg-offset-2">
                 <div id="nav"></div>
