@@ -28,7 +28,7 @@
 	else{
 		//echo "query...";
 		$db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
-		$rows = $db->query("SELECT DISTINCT username, password FROM Login WHERE username='$usern';");
+		$rows = $db->query("SELECT DISTINCT username, password, role FROM Login WHERE username='$usern';");
 		$found = false;
 		foreach($rows as $row)
 		{	
