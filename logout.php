@@ -12,7 +12,6 @@
 <?php
 	session_start();
 	session_destroy();
-	echo "user is logged out.";
 ?>
 <a class="link" id="leave" href="index.html">Main</a>
 </body>
