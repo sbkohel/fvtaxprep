@@ -15,8 +15,8 @@
             <li class=""><a href="index.html">Home</a></li>
             <li class="active"><a href="services.php">Services</a></li>
             <li class=""><a href="deductions.html">Deductions</a></li>
-            <li class=""><a href="signup.html">Sign Up</a></li>
-            <li class=""><a href="login.html">Log In</a></li>
+            <li class=""><a href="signup0.php">Sign Up</a></li>
+            <li class=""><a href="login0.php">Log In</a></li>
         </ul> 
 			
         <div class="row">

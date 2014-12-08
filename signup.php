@@ -11,6 +11,7 @@
 <body onload ="start_checkSignup();">
 
 <?php
+	session_start();
 	$fname = $_POST["firstName"];
 	$lname = $_POST["lastName"];
 	$addr = $_POST["address"];
@@ -42,9 +43,12 @@
 		{
 			$phash = crypt($pass1, "mysalt");          //should update hash !!! password_hash('$pass1') 
 			$sessionid = crypt(time());
+			$customerid = substr($sessionid, 0, 40);
+			//echo $customerid;
 			$db->query("INSERT INTO Login VALUES ('$usern', '$phash', 'customer');");
-			$_SESSION['sid'] = $sessionid;
-			$_SESSION['uid'] = $usern;
+			$db->query("INSERT INTO Customers VALUES ('$customerid', $usern', '$fname', '$lname', '$addr', '$phone', '$cell', '$email');");
+			$_SESSION['uid'] = $sessionid;
+			//$_SESSION['uid'] = $usern;
 			//echo $_SESSION['uid'];
 			echo "user : ".$usern." is logged in!";
 			?>

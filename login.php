@@ -11,6 +11,7 @@
 <body onload ="start_checkLogin();">
 
 	<?php
+	session_start();
 	$usern = $_POST["username"];
 	$pass1 = $_POST["password"];
 	?>
@@ -21,7 +22,7 @@
 	if(isset($_SESSION['uid'])){
 	echo "user is already logged in!";
 	?>
-		<br/><a class="link" href="login.html" id="gohere">logout</a><br/>
+		<br/><a class="link" href="logout.php" id="gohere">logout</a><br/>
 	<?php
 	} 
 	else{
@@ -63,7 +64,7 @@
 		{
 			echo "username : ".$usern." already exists!   ";
 			?>
-			<br/><a class="link" href="login.html" id="gohere">try again!</a><br/>
+			<br/><a class="link" href="login0.php" id="gohere">try again!</a><br/>
 			<?php
 		}
 	}
