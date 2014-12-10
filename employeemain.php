@@ -15,12 +15,25 @@
 <body>
 	<div class="container">
         <ul class="nav nav-pills">
-            <li class=""><a href="index.html">Home</a></li>
+            <li class=""><a href="index.php">Home</a></li>
             <li class=""><a href="services.php">Services</a></li>
-            <li class=""><a href="deductions.html">Deductions</a></li>
+            <li class=""><a href="deductions.php">Deductions</a></li>
             <li class="active"><a href="employeemain.php">Employee</a></li>
             <li class=""><a href="logout.php">Logout</a></li>
        </ul> 
+        <?php
+        session_start();
+        if (isset($_SESSION['uid'])) {
+            $usid = $_SESSION['uid'];
+            $db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
+            $rows = $db->query("SELECT username, password, role FROM Login WHERE username='$usid';");
+            foreach($rows as $row)
+            {   
+                $role = $row[2];
+                break;
+            }
+            if($role != "customer"){
+        ?>
         <div class="row calendar">
             <div class = "col-lg-2">
                 <div id="nav"></div>
@@ -144,8 +157,25 @@
 				<small>Website created as a project by computer science students at the University of Wisconsin Oshkosh</small>
 			</p>
         </div>
+        <?php
+        }
+        else{
+        ?>
+        <br/>
+        <Large>YOU DON'T HAVE ACCESS TO THIS PAGE!</Large>
+        <?php
+        }
+    }else{
+    ?>
+    <br/>
+    <span>YOU ARE NOT LOGGED IN!</span><br/>
+    <?php
+    }
+    ?>
+
+
 	</div>
-	<script src=>"js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
     <script src="js/daypilot/daypilot-all.min.js" type="text/javascript"></script>
     <script src="js/calender.js" type="text/javascript"></script>
 </body>
