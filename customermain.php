@@ -16,9 +16,9 @@
 <body>
 	<div class="container">
         <ul class="nav nav-pills">
-            <li class=""><a href="index.html">Home</a></li>
+            <li class=""><a href="index.php">Home</a></li>
             <li class=""><a href="services.php">Services</a></li>
-            <li class=""><a href="deductions.html">Deductions</a></li>
+            <li class=""><a href="deductions.php">Deductions</a></li>
             <li class="active"><a href="customermain.php">Customer</a></li>
         </ul> 
 	<div class="row">
@@ -74,7 +74,7 @@
 			<small>Website created as a project by computer science students at the University of Wisconsin Oshkosh</small>
 		</p>
 	</div>
-	<script src=>"js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
     <script src="js/calender.js" type="text/javascript"></script>
 </body>
 </html>

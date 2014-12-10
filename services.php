@@ -12,11 +12,38 @@
 <body>
 	<div class="container">
         <ul class="nav nav-pills">
-            <li class=""><a href="index.html">Home</a></li>
+            <li class=""><a href="index.php">Home</a></li>
             <li class="active"><a href="services.php">Services</a></li>
-            <li class=""><a href="deductions.html">Deductions</a></li>
-            <li class=""><a href="signup0.php">Sign Up</a></li>
-            <li class=""><a href="login0.php">Log In</a></li>
+            <li class=""><a href="deductions.php">Deductions</a></li>
+            <?php
+            session_start();
+            if (isset($_SESSION['uid'])) {
+                $usid = $_SESSION['uid'];
+                $db = new PDO("mysql:dbname=kohels65;host=localhost","kohels65","style69!!");
+                $rows = $db->query("SELECT username, password, role FROM Login WHERE username='$usid';");
+                foreach($rows as $row)
+                {   
+                    $role = $row[2];
+                    break;
+                }
+                if($role == "customer"){
+                ?>
+                    <li class=""><a href="customermain.php">Customer Main</a></li>
+                    <li class=""><a href="logout.php">Log Out</a></li>
+                <?php
+                }else{
+                ?>
+                    <li class=""><a href="employeemain.php">Employee Main</a></li>
+                    <li class=""><a href="logout.php">Log Out</a></li>
+                <?php
+                }
+            }else{
+                ?>
+                    <li class=""><a href="signup0.php">Sign Up</a></li>
+                    <li class=""><a href="login0.php">Log In</a></li>
+            <?php
+            }
+            ?>  
         </ul> 
 
         <div class="row">
